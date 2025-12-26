@@ -1,23 +1,7 @@
 #!/bin/bash
 
-if [[ $# -ne 2 ]]; then
-    echo "Usage: $0 <ARCH> <DESTINATION>"
-    exit 1
-fi
-
-ARCH=$1
-DESTINATION=$2
-
-if [[ $ARCH -ne 32 && $ARCH -ne 64 ]]; then
-    echo "Invalid value for BUILD_FOR. It should be either 32 or 64."
-    exit 1
-fi
-
-if [[ $ARCH -eq 32 ]]; then
-    OUTPUT_FILE="fusion.dll"
-else
-    OUTPUT_FILE="fusion${ARCH}.dll"
-fi
+ARCH=64
+OUTPUT_FILE="fusion64.dll"
 
 rm -rf ./obj
 

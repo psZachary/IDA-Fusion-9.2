@@ -7,7 +7,7 @@ OBJ_DIR        := obj/
 OBJ_FILES      := $(wildcard $(OBJ_DIR)*.o)
 
 ifeq ($(BUILD_FOR), 32)
-  COMPILER_FLAGS += -Lsdk/lib/x64_win_vc_32
+  COMPILER_FLAGS += -Lsdk/lib/x64_win_vc_64
 else
   COMPILER_FLAGS += -Lsdk/lib/x64_win_vc_64 -D__EA64__
 endif
